@@ -8,7 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Activity, CreditCard, Layout, Settings } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter, usePathname, redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -59,6 +59,7 @@ export const NavItem = ({
   ];
 
   const onClick = (href: string) => {
+    // window.location.href = href;
     router.push(href);
   };
 
